@@ -1,16 +1,26 @@
 import React from "react";
-import {WalletConnectButton} from "@solana/wallet-adapter-react-ui"
+import {useWallet} from "@solana/wallet-adapter-react"
+import {WalletMultiButton} from "@solana/wallet-adapter-react-ui"
 
 const styles = {
-    loginPage:"b-screen h-screen flex justify-center items-center bg-black",
-    text:"text-white text-4xl mb-10"
+    loginPage:"w-screen h-screen flex justify-center items-center flex-col bg-black",
+    text:"text-white text-20xl mb-10"
 }
 
 function login() {
-  return <div className={styles.loginPage}>
-    <p className={styles.text}>Login to access this page</p>
-    <WalletConnectButton />
-  </div>;
+
+  const wallet = useWallet()
+
+  if(wallet.connected) return <Payment>
+      
+  </Payment>
+  return (<div className={styles.loginPage}>
+    <p className={styles.text}>Tunes.sol</p>
+
+    <WalletMultiButton />
+ 
+   
+  </div>);
 }
 
 export default login;
