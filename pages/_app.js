@@ -1,5 +1,6 @@
-import "../styles/globals.css";
 import dynamic from "next/dynamic";
+import "../styles/globals.css";
+import { SpotifyProvider } from "../context/context";
 require("@solana/wallet-adapter-react-ui/styles.css");
 
 const WalletConnectionProvider = dynamic(
@@ -12,7 +13,9 @@ const WalletConnectionProvider = dynamic(
 function MyApp({ Component, pageProps }) {
   return (
     <WalletConnectionProvider>
-      <Component {...pageProps} />
+      <SpotifyProvider>
+        <Component {...pageProps} />
+      </SpotifyProvider>
     </WalletConnectionProvider>
   );
 }
