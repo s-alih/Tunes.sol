@@ -14,7 +14,7 @@ const style = {
   playlistTextContent: `flex items-end mt-10`,
   profileAvatarContainer: `w-7 h-7 rounded-full -ml-2 mr-3`,
   controlsContainer: `flex items-center mt-10`,
-  playButton: `bg-green-500 w-16 h-16 flex pl-2 items-center justify-center rounded-full cursor-pointer`,
+  playButton: `bg-pink-500 w-16 h-16 flex pl-2 items-center justify-center rounded-full cursor-pointer`,
 };
 
 const Header = ({ setShowUploadMusic }) => {
@@ -71,9 +71,7 @@ const Header = ({ setShowUploadMusic }) => {
         <div className={style.playButton}>
           <img alt="" src="assets/play.svg" width={30} height={30} />
         </div>
-        <div className={style.iconContainer}>
-          <img alt="" src="assets/heart.svg" width={30} height={30} />
-        </div>
+
         <div className={style.iconContainer}>
           <img alt="" src="assets/download.svg" width={30} height={30} />
         </div>
